@@ -22,7 +22,7 @@ Describe 'Assignment Operator' {
 
     It 'is used to assign a value to variables' {
         $ExpectedValue = 1 + 1
-        $ActualValue = __
+        $ActualValue = 2
 
         $ActualValue | Should -Be $ExpectedValue
     }
@@ -31,7 +31,7 @@ Describe 'Assignment Operator' {
         # With arrays, we can assign values directly to indexes
         $Array = 1, 2, 3
         $Array[2] = 5
-        $Array | Should -Be @(1, 2, 3) # What would change?
+        $Array | Should -Be @(1, 2, 5) # What would change?
     }
 
     It 'can assign values to many variables at once' {
